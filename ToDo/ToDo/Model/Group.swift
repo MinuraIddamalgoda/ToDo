@@ -9,10 +9,13 @@
 import Foundation
 import UIKit
 
-class Group
+class Group : Hashable
 {
     // MARK: Instance vars
     var idNum = UUID.init()
+    var hashValue: Int {
+        return idNum.hashValue
+    }
     var name: String
     var taskCount = 0
     var color: UIColor
@@ -20,5 +23,9 @@ class Group
     init(name: String, color: UIColor) {
         self.name = name
         self.color = color
+    }
+    
+    static func == (lhs: Group, rhs: Group) -> Bool {
+        return lhs.hashValue == rhs.hashValue
     }
 }
