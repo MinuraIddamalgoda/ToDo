@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A239B3620C93AC40097DDF5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A239B3520C93AC40097DDF5 /* HomeViewController.swift */; };
+		0A239B3A20C9552A0097DDF5 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A239B3920C9552A0097DDF5 /* GroupCollectionViewCell.swift */; };
 		0AC5C05B20C6595000EECE49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5C05A20C6595000EECE49 /* AppDelegate.swift */; };
-		0AC5C05D20C6595000EECE49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5C05C20C6595000EECE49 /* ViewController.swift */; };
 		0AC5C06020C6595000EECE49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC5C05E20C6595000EECE49 /* Main.storyboard */; };
 		0AC5C06320C6595000EECE49 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5C06120C6595000EECE49 /* ToDo.xcdatamodeld */; };
 		0AC5C06520C6595200EECE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC5C06420C6595200EECE49 /* Assets.xcassets */; };
@@ -38,9 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A239B3520C93AC40097DDF5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0A239B3920C9552A0097DDF5 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		0AC5C05720C6595000EECE49 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC5C05A20C6595000EECE49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AC5C05C20C6595000EECE49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0AC5C05F20C6595000EECE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AC5C06220C6595000EECE49 /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
 		0AC5C06420C6595200EECE49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,9 +107,9 @@
 		0AC5C05920C6595000EECE49 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				0AC5C09420C7520F00EECE49 /* Controller */,
 				0AC5C08B20C68B7300EECE49 /* Model */,
 				0AC5C05A20C6595000EECE49 /* AppDelegate.swift */,
-				0AC5C05C20C6595000EECE49 /* ViewController.swift */,
 				0AC5C05E20C6595000EECE49 /* Main.storyboard */,
 				0AC5C06420C6595200EECE49 /* Assets.xcassets */,
 				0AC5C06620C6595200EECE49 /* LaunchScreen.storyboard */,
@@ -143,6 +145,15 @@
 				0AC5C09020C6A4F100EECE49 /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0AC5C09420C7520F00EECE49 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A239B3520C93AC40097DDF5 /* HomeViewController.swift */,
+				0A239B3920C9552A0097DDF5 /* GroupCollectionViewCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,12 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC5C05D20C6595000EECE49 /* ViewController.swift in Sources */,
 				0AC5C08D20C68CC400EECE49 /* ColorExtension.swift in Sources */,
+				0A239B3A20C9552A0097DDF5 /* GroupCollectionViewCell.swift in Sources */,
 				0AC5C08F20C6A4D100EECE49 /* Task.swift in Sources */,
 				0AC5C09120C6A4F100EECE49 /* Group.swift in Sources */,
 				0AC5C06320C6595000EECE49 /* ToDo.xcdatamodeld in Sources */,
 				0AC5C05B20C6595000EECE49 /* AppDelegate.swift in Sources */,
+				0A239B3620C93AC40097DDF5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
