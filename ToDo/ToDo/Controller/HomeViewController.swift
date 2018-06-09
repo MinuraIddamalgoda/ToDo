@@ -30,7 +30,9 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController : UICollectionViewDataSource {
+extension HomeViewController : UICollectionViewDataSource,
+                    UICollectionViewDelegateFlowLayout,
+                    UIScrollViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -44,5 +46,24 @@ extension HomeViewController : UICollectionViewDataSource {
         cell.group = self.groups[indexPath.item]
         print("Name: \(cell.group.name)\n")
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        // Determine the index of the new page
+        let pageWidth = collectionView.frame.size.width
+        let index: Int = Int(collectionView.contentOffset.x / pageWidth)
+        
+        // Get content
+        let currentContent = groups[index]
+        let backgroundColor = groups[index].color
+        
+        // Transition animation
+        UIView.transition(with: bgView, duration: 0.8, options: .transitionCrossDissolve, animations: {
+            self.bgView.backgroundColor = backgroundColor
+        }, completion: nil)
     }
 }
