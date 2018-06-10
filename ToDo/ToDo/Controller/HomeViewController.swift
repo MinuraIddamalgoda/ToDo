@@ -17,20 +17,25 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cellNameLabel: UILabel!
     
     // MARK: - UICollectionViewDataSource
-    var groups = Group.createGroups()
+    var groups: [Group]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.groups = Group.createGroups()
+        // Set the background to the starting index
+        changeBackground(index: 0)
     }
     
-    private struct Storyboard {
-        static let CellIdentifier = "Group Cell"
+    private func changeBackground(index: Int) {
+        UIView.transition(with: bgView, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.bgView.backgroundColor = self.groups[index].color
+        }, completion: nil)
     }
 }
 
-extension HomeViewController : UICollectionViewDataSource,
+extension HomeViewController :
+                    UICollectionViewDataSource,
                     UICollectionViewDelegateFlowLayout,
                     UIScrollViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -42,7 +47,7 @@ extension HomeViewController : UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.CellIdentifier, for: indexPath) as! GroupCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.GroupCellIdentifier, for: indexPath) as! GroupCollectionViewCell
         cell.group = self.groups[indexPath.item]
         print("Name: \(cell.group.name)\n")
         return cell
@@ -56,14 +61,6 @@ extension HomeViewController : UICollectionViewDataSource,
         // Determine the index of the new page
         let pageWidth = collectionView.frame.size.width
         let index: Int = Int(collectionView.contentOffset.x / pageWidth)
-        
-        // Get content
-        let currentContent = groups[index]
-        let backgroundColor = groups[index].color
-        
-        // Transition animation
-        UIView.transition(with: bgView, duration: 0.8, options: .transitionCrossDissolve, animations: {
-            self.bgView.backgroundColor = backgroundColor
-        }, completion: nil)
+        changeBackground(index: index)
     }
 }

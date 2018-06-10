@@ -22,6 +22,5 @@ class GroupCollectionViewCell: UICollectionViewCell {
     
     private func updateUI() {
         nameLabel?.text! = group.name
-        groupCollectionViewCellBgView?.backgroundColor! = group.color
     }
 }

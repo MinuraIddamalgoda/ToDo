@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A239B3620C93AC40097DDF5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A239B3520C93AC40097DDF5 /* HomeViewController.swift */; };
 		0A239B3A20C9552A0097DDF5 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A239B3920C9552A0097DDF5 /* GroupCollectionViewCell.swift */; };
+		0A6314CC20CCA75F008EEE94 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6314CB20CCA75F008EEE94 /* Storyboard.swift */; };
 		0AC5C05B20C6595000EECE49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5C05A20C6595000EECE49 /* AppDelegate.swift */; };
 		0AC5C06020C6595000EECE49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC5C05E20C6595000EECE49 /* Main.storyboard */; };
 		0AC5C06320C6595000EECE49 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5C06120C6595000EECE49 /* ToDo.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		0A239B3520C93AC40097DDF5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0A239B3920C9552A0097DDF5 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		0A6314CB20CCA75F008EEE94 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		0AC5C05720C6595000EECE49 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC5C05A20C6595000EECE49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC5C05F20C6595000EECE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				0AC5C08C20C68CC400EECE49 /* ColorExtension.swift */,
 				0AC5C08E20C6A4D100EECE49 /* Task.swift */,
 				0AC5C09020C6A4F100EECE49 /* Group.swift */,
+				0A6314CB20CCA75F008EEE94 /* Storyboard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				0A239B3A20C9552A0097DDF5 /* GroupCollectionViewCell.swift in Sources */,
 				0AC5C08F20C6A4D100EECE49 /* Task.swift in Sources */,
 				0AC5C09120C6A4F100EECE49 /* Group.swift in Sources */,
+				0A6314CC20CCA75F008EEE94 /* Storyboard.swift in Sources */,
 				0AC5C06320C6595000EECE49 /* ToDo.xcdatamodeld in Sources */,
 				0AC5C05B20C6595000EECE49 /* AppDelegate.swift in Sources */,
 				0A239B3620C93AC40097DDF5 /* HomeViewController.swift in Sources */,
